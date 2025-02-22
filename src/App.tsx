@@ -25,7 +25,7 @@ const socialLinks = [
   {
     name: 'Discord',
     icon: Discord,
-    url: 'https://discord.com/invite/x7dd75cb2z',
+    url: 'https://discord.gg/48BDu759Yc',
     bgColor: 'hover:bg-indigo-500',
   },
   {
@@ -131,8 +131,8 @@ function App() {
         </div>
 
         <footer className="mt-12 text-center text-purple-200/60 text-sm">
-          <p>© 2025 William2Sober • Stay Strong 💪</p>
-          <p className="mt-2">Made with ❤️ by techllko</p>
+          <p>© 2025 William2Sober/p>
+          <p className="mt-2">Made with ❤️ by Techllko</p>
         </footer>
       </div>
     </div>
