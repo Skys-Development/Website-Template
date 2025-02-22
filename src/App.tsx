@@ -73,6 +73,8 @@ const socialLinks = [
 ];
 
 function App() {
+  const currentYear = new Date().getFullYear(); // Get current year dynamically
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-2xl mx-auto px-4 py-16">
@@ -131,7 +133,7 @@ function App() {
         </div>
 
         <footer className="mt-12 text-center text-purple-200/60 text-sm">
-          <p>© 2025 William2Sober/p>
+          <p>© {currentYear} William2Sober</p> {/* Dynamically renders current year */}
           <p className="mt-2">Made with ❤️ by Techllko</p>
         </footer>
       </div>
