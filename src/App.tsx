@@ -93,7 +93,7 @@ function App() {
           
           <div className="flex items-center justify-center gap-2 text-purple-200 mb-4">
             <Code2 size={20} />
-            <span>Coder</span>
+            <span>Coder (JS, Python)</span>
             <span>&</span>
             <Gamepad2 size={20} />
             <span>Gamer</span>
@@ -110,6 +110,10 @@ function App() {
             <div className="flex items-center gap-2 mb-8">
               <Heart size={16} className="text-red-400" />
               <span>Stay Sober</span>
+            </div>
+            <div className="flex flex-col text-purple-200">
+              <span>Developer: Websites, Discord Bots</span>
+              <span>Icons from <a href="https://lucide.dev/icons/" className="text-blue-400">Lucide</a></span>
             </div>
           </div>
         </div>
