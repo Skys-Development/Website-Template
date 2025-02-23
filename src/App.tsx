@@ -94,9 +94,7 @@ function App() {
           <div className="flex items-center justify-center gap-2 text-purple-200 mb-4">
             <Code2 size={20} />
             <span>Coder (JS, Python)</span>
-          </div>
-          
-          <div className="flex items-center justify-center gap-2 text-purple-200 mb-4">
+            <span>&</span>
             <Gamepad2 size={20} />
             <span>Gamer</span>
           </div>
