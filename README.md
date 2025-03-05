@@ -1,4 +1,4 @@
-# william2sober.is-a-good.dev
+# william2sober.us.kg
 
 Welcome to my personal website! This is where I share my journey, passions, and where you can connect with me on all my social platforms.
 
@@ -36,4 +36,4 @@ I value living a sober life, focusing on my goals, and making the most out of ev
 
 ## Thanks for Visiting!
 
-Thanks for checking out my website at [william2sober.is-a-good.dev](https://william2sober.is-a-good.dev). Feel free to explore, connect, and stay updated on all my latest projects and social media activities.
+Thanks for checking out my website at [william2sober.us.kg](https://william2sober.us.kg). Feel free to explore, connect, and stay updated on all my latest projects and social media activities.
