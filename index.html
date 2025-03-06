@@ -146,16 +146,6 @@
         color: #555;
       }
 
-      footer {
-        position: absolute;
-        bottom: 10px;
-        text-align: center;
-        font-size: 14px;
-        color: #555;
-        opacity: 0;
-        transition: opacity 2s ease-in-out;
-      }
-
       .social-links a {
         opacity: 1;
       }
@@ -212,10 +202,6 @@
       <i id="volume-icon" class="fas fa-volume-up"></i>
     </div>
 
-    <footer>
-      © <span id="current-year"></span> William Holley. All rights reserved.
-    </footer>
-
     <script>
       const birthDate = new Date('2009-06-19');
       const currentDate = new Date();
@@ -253,7 +239,6 @@
           document.querySelector(".about-me").style.opacity = 1;
           document.querySelector(".social-links").style.opacity = 1;
           document.querySelector(".volume-control").style.opacity = 1;
-          document.querySelector("footer").style.opacity = 1;
         }, 1000);
       };
 
