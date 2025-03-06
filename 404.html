@@ -9,7 +9,7 @@
     <meta property="og:description" content="The page you're looking for does not exist." />
     <meta property="og:image" content="profile.jpg" />
     <title>404 - Page Not Found</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.png" type="image/png" />
     <script src="https://kit.fontawesome.com/25bc89a4e6.js" crossorigin="anonymous"></script>
     <style>
       * {
@@ -27,55 +27,67 @@
         justify-content: center;
         height: 100vh;
         text-align: center;
-        color: #333;
+        color: white;
         font-size: 24px;
       }
 
       h1 {
-        font-size: 72px;
+        font-size: 100px;
+        font-weight: bold;
+        color: #0073e6; /* Light blue color */
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
         margin-bottom: 20px;
-        color: #ff6347;
       }
 
       p {
-        font-size: 18px;
+        font-size: 20px;
+        color: white;
+        margin-bottom: 20px;
+        font-weight: 400;
+      }
+
+      .emoji {
+        font-size: 80px;
+        color: #0073e6;
         margin-bottom: 20px;
       }
 
       .back-button {
         background: #0073e6;
         color: white;
-        padding: 10px 20px;
+        padding: 15px 30px;
         border: none;
-        border-radius: 5px;
+        border-radius: 8px;
+        font-size: 18px;
         text-decoration: none;
-        font-size: 16px;
-        transition: background 0.3s ease-in-out;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
       }
 
       .back-button:hover {
         background: #005bb5;
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
       }
 
-      footer {
-        position: absolute;
-        bottom: 10px;
-        font-size: 14px;
-        color: #555;
+      .fab {
+        font-size: 50px;
+        color: #0073e6;
+        transition: color 0.3s ease;
+      }
+
+      .fab:hover {
+        color: white;
       }
     </style>
   </head>
   <body>
     <h1>404</h1>
-    <p>Oops! The page you're looking for doesn't exist.</p>
-    <a href="/" class="back-button">Go Back Home</a>
-    <footer>
-      © <span id="current-year"></span> William Holley. All rights reserved.
-    </footer>
-
-    <script>
-      // Set current year in footer
-      document.getElementById("current-year").textContent = new Date().getFullYear();
-    </script>
+    <div class="emoji">
+      <i class="fas fa-exclamation-triangle"></i>
+    </div>
+    <p>Oops! Looks like this page doesn't exist or has been moved.</p>
+    <a href="/" class="back-button">
+      <i class="fas fa-home"></i> Go Back Home
+    </a>
   </body>
 </html>
