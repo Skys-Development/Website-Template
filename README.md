@@ -1,7 +1,3 @@
-Here’s the updated version without mentions of Raeleen:  
-
----
-
 **Welcome to my personal website!** This is where I share my journey, passions, and where you can connect with me on all my social platforms.  
 
 ## About Me  
