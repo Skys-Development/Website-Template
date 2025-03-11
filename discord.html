@@ -8,10 +8,10 @@
     <meta property="og:title" content="Join William's Discord Server" />
     <meta property="og:description" content="Click here to join William's official Discord server!" />
     <meta property="og:image" content="profile.jpg" />
-    <meta http-equiv="refresh" content="3;url=https://discord.gg/48BDu759Yc" />
     <title>Redirecting...</title>
     <link rel="icon" href="favicon.png" type="image/x-icon" />
     <script src="https://kit.fontawesome.com/25bc89a4e6.js" crossorigin="anonymous"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <style>
       * {
         margin: 0;
@@ -71,13 +71,14 @@
   <body>
     <i class="fas fa-spinner redirect-icon"></i>
     <h1>Redirecting...</h1>
-    <p>If you are not redirected automatically, <br />click the button below.</p>
-    <a href="https://discord.gg/48BDu759Yc" class="redirect-link">Join Discord</a>
+    <p>Please complete the verification below to continue.</p>
+
+    <div class="cf-turnstile" data-sitekey="0x4AAAAAABAWYX9pTF1m56Wd" data-callback="onVerified"></div>
 
     <script>
-      setTimeout(() => {
+      function onVerified() {
         window.location.href = "https://discord.gg/48BDu759Yc";
-      }, 3000);
+      }
     </script>
   </body>
 </html>
