@@ -30,4 +30,4 @@ I value living a sober life, focusing on my goals, and making the most out of ev
 
 ## Thanks for Visiting!  
 
-Thanks for checking out my website at [william2sober.us.kg](https://william2sober.us.kg). Feel free to explore, connect, and stay updated on all my latest projects and social media activities.
+Thanks for checking out my website at [william2sober.fck.ink](https://william2sober.fck.ink/). Feel free to explore, connect, and stay updated on all my latest projects and social media activities.
