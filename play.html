@@ -25,25 +25,41 @@
             height: 100vh;
             text-align: center;
             color: #333;
+            flex-direction: column;
         }
         .message {
             font-size: 20px;
             font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background: #0056b3;
         }
     </style>
     <script>
-        window.onload = function() {
-            const serverIP = "play.willy.us.kg";
-            navigator.clipboard.writeText(serverIP).then(() => {
-                document.getElementById("status").innerText = "IP copied! You can now paste it in Minecraft.";
+        function copyIP(ip) {
+            navigator.clipboard.writeText(ip).then(() => {
+                document.getElementById("status").innerText = `IP copied! (${ip}) You can now paste it in Minecraft.`;
             }).catch(err => {
                 document.getElementById("status").innerText = "Failed to copy IP. Please copy manually.";
                 console.error("Failed to copy:", err);
             });
-        };
+        }
     </script>
 </head>
 <body>
-    <div class="message" id="status">Copying server IP...</div>
+    <div class="message" id="status">Click a button to copy the server IP.</div>
+    <button class="button" onclick="copyIP('play.willy.us.kg:25597')">Server IP 1</button>
+    <button class="button" onclick="copyIP('play.willy.dpdns.org:25597')">Server IP 2</button>
 </body>
 </html>
