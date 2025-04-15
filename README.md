@@ -10,7 +10,7 @@ Here’s where you can find me online:
 
 - **[YouTube](https://www.youtube.com/@William2sober?sub_confirmation=1)**: Watch my videos and subscribe!  
 - **[Discord](https://discord.gg/48BDu759Yc)**: Join my server and chat with me.  
-- **[TikTok](https://www.tiktok.com/@raeleenboyfriend)**: Follow me for some fun content.  
+- **[TikTok](https://www.tiktok.com/@william2sober)**: Follow me for some fun content.  
 - **[Twitch](https://www.twitch.tv/william2sober)**: Watch me stream my favorite games.  
 - **[Twitter](https://x.com/william2sober)**: Stay updated with my thoughts.  
 - **[Instagram](https://www.instagram.com/william2sober)**: See what I’m up to daily.  
