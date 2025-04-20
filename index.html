@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="William Holley | Developer, Gamer, and Content Creator" />
   <meta name="author" content="William2Sober" />
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#add8e6" />
   <link rel="icon" href="favicon.png" type="image/png" />
 
   <!-- Open Graph / Twitter Cards -->
@@ -19,20 +19,12 @@
   <title>William Holley | Social</title>
   <script src="https://kit.fontawesome.com/25bc89a4e6.js" crossorigin="anonymous"></script>
   <style>
-    :root {
-      --bg-dark: #000;
-      --text-dark: #fff;
-      --bg-light: #fff;
-      --text-light: #000;
-    }
-
     body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background-color: var(--bg-dark);
-      color: var(--text-dark);
-      transition: background 0.3s, color 0.3s;
+      background-color: #add8e6; /* Light blue */
+      color: #000;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -41,17 +33,12 @@
       text-align: center;
     }
 
-    body.light-mode {
-      background-color: var(--bg-light);
-      color: var(--text-light);
-    }
-
     .profile-image {
       width: 150px;
       height: 150px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid currentColor;
+      border: 3px solid #000;
     }
 
     .name {
@@ -66,7 +53,7 @@
       max-width: 600px;
       width: 100%;
       background: transparent;
-      border: 2px solid currentColor;
+      border: 2px solid #000;
       border-radius: 10px;
       font-size: 16px;
     }
@@ -82,67 +69,26 @@
     .social-links a {
       width: 80px;
       height: 80px;
-      background-color: currentColor;
+      background-color: #ff7f50; /* Coral */
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       text-decoration: none;
-      transition: 0.3s;
+      transition: transform 0.3s;
+    }
+
+    .social-links a:hover {
+      transform: scale(1.1);
     }
 
     .social-links a i {
-      color: var(--bg-dark);
+      color: #fff;
       font-size: 36px;
-    }
-
-    body.light-mode .social-links a i {
-      color: var(--bg-light);
-    }
-
-    .theme-toggle {
-      position: fixed;
-      top: 15px;
-      right: 20px;
-      padding: 8px 12px;
-      background: transparent;
-      border: 2px solid currentColor;
-      border-radius: 8px;
-      color: inherit;
-      cursor: pointer;
-      z-index: 1000;
-      transition: 0.3s;
-    }
-
-    .rain {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 999;
-    }
-
-    .raindrop {
-      position: absolute;
-      top: -5px;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.6);
-      animation: fall 2.5s linear infinite;
-    }
-
-    @keyframes fall {
-      0% { top: -5px; opacity: 1; }
-      100% { top: 100%; opacity: 0.6; }
     }
   </style>
 </head>
 <body>
-  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
-
   <div class="profile-container">
     <img class="profile-image" src="profile.jpg" alt="Profile Image" />
     <div class="name">William Holley</div>
@@ -164,37 +110,5 @@
     <a href="https://api.whatsapp.com/send/?phone=13099483484" target="_blank"><i class="fab fa-whatsapp"></i></a>
     <a href="https://willy.us.kg/discord" target="_blank"><i class="fas fa-link"></i></a>
   </div>
-
-  <div class="rain" id="rain"></div>
-
-  <script>
-    // Rain effect
-    const rain = document.getElementById('rain');
-    function createRaindrops() {
-      const drop = document.createElement('div');
-      drop.classList.add('raindrop');
-      drop.style.left = `${Math.random() * 100}vw`;
-      drop.style.animationDuration = `${Math.random() * 1.5 + 2.5}s`;
-      drop.style.animationDelay = `${Math.random() * 3}s`;
-      rain.appendChild(drop);
-      setTimeout(() => drop.remove(), 5000);
-    }
-    setInterval(createRaindrops, 100);
-
-    // Theme toggle with localStorage
-    function toggleTheme() {
-      document.body.classList.toggle('light-mode');
-      const mode = document.body.classList.contains('light-mode') ? 'light' : 'dark';
-      localStorage.setItem('theme', mode);
-    }
-
-    // Load saved theme
-    window.onload = () => {
-      const saved = localStorage.getItem('theme');
-      if (saved === 'light') {
-        document.body.classList.add('light-mode');
-      }
-    };
-  </script>
 </body>
 </html>
