@@ -21,7 +21,7 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #add8e6;
       color: #000;
       display: flex;
@@ -41,20 +41,22 @@
     }
 
     .name {
-      font-size: 24px;
-      font-weight: bold;
-      margin-top: 10px;
+      font-size: 28px;
+      font-weight: 700;
+      margin-top: 12px;
     }
 
     .about-me {
-      margin: 20px;
-      padding: 20px;
-      max-width: 600px;
-      width: 100%;
-      background: #ffffffcc;
-      border: 2px solid #000;
-      border-radius: 10px;
-      font-size: 16px;
+      margin: 25px 20px;
+      padding: 25px;
+      max-width: 650px;
+      background: #ffffffee;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 1.6;
+      color: #333;
     }
 
     .social-links {
@@ -68,23 +70,22 @@
     .social-links a {
       width: 80px;
       height: 80px;
-      background-color: coral;
+      background-color: #222;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       text-decoration: none;
-      transition: 0.3s;
+      transition: transform 0.25s ease;
+    }
+
+    .social-links a:hover {
+      transform: scale(1.15);
     }
 
     .social-links a i {
-      color: white;
+      color: #fff;
       font-size: 36px;
-      transition: 0.3s;
-    }
-
-    .social-links a:hover i {
-      color: black;
     }
   </style>
 </head>
@@ -95,7 +96,7 @@
   </div>
 
   <div class="about-me">
-    <p>Hey, I’m William — a passionate developer and gamer who’s all about building cool projects, staying focused, and living a clean lifestyle. Whether it’s coding a bot, designing a website, or gaming with friends, I’m constantly creating and improving. Welcome to my space online!</p>
+    <p>Hey, I’m William — a focused developer, passionate gamer, and creative thinker. I love building innovative things, from websites to bots, and I proudly live life sober. Whether I'm coding or kicking back with games, I’m all about staying driven, honest, and real.</p>
   </div>
 
   <div class="social-links">
