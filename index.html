@@ -39,18 +39,31 @@
         box-sizing: border-box;
       }
 
-      body {
+      html, body {
         background: #0a0a0a;
         color: white;
         font-family: Arial, sans-serif;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      canvas#stars {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        background: transparent;
+      }
+
+      body {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 100vh;
         text-align: center;
         padding: 20px;
-        overflow: hidden;
       }
 
       .profile-container {
@@ -63,12 +76,24 @@
         border-radius: 50%;
         object-fit: cover;
         border: 3px solid white;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+        transition: transform 0.3s;
+      }
+
+      .profile-image:hover {
+        transform: scale(1.05);
       }
 
       .name {
         font-size: 24px;
         font-weight: bold;
         margin-top: 10px;
+      }
+
+      #typewriter {
+        margin-top: 5px;
+        font-size: 14px;
+        color: #aaa;
       }
 
       .about-me {
@@ -150,9 +175,12 @@
     </style>
   </head>
   <body>
+    <canvas id="stars"></canvas>
+
     <div class="profile-container">
       <img class="profile-image" src="profile.jpg" alt="Profile Image" />
       <div class="name">William Holley</div>
+      <div id="typewriter"></div>
     </div>
 
     <div class="about-me">
@@ -178,8 +206,8 @@
     <div class="rain" id="rain"></div>
 
     <script>
+      // Rain Animation
       const rain = document.getElementById('rain');
-
       function createRaindrops() {
         const raindrop = document.createElement('div');
         raindrop.classList.add('raindrop');
@@ -187,13 +215,46 @@
         raindrop.style.animationDuration = `${Math.random() * 1.5 + 2.5}s`;
         raindrop.style.animationDelay = `${Math.random() * 3}s`;
         rain.appendChild(raindrop);
-
-        setTimeout(() => {
-          raindrop.remove();
-        }, 5000);
+        setTimeout(() => raindrop.remove(), 5000);
       }
-
       setInterval(createRaindrops, 100);
+
+      // Typewriter Effect
+      const text = "developer. gamer. content creator. sober life advocate.";
+      let index = 0;
+      function type() {
+        document.getElementById("typewriter").textContent = text.slice(0, index++);
+        if (index <= text.length) setTimeout(type, 100);
+        else setTimeout(() => { index = 0; type(); }, 2000);
+      }
+      type();
+
+      // Starfield Background
+      const canvas = document.getElementById('stars');
+      const ctx = canvas.getContext('2d');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      let stars = Array.from({ length: 100 }, () => ({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 1.2,
+        speed: Math.random() * 0.5 + 0.2,
+      }));
+
+      function animateStars() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        stars.forEach((star) => {
+          ctx.beginPath();
+          ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+          ctx.fillStyle = '#fff';
+          ctx.fill();
+          star.y += star.speed;
+          if (star.y > canvas.height) star.y = 0;
+        });
+        requestAnimationFrame(animateStars);
+      }
+      animateStars();
     </script>
   </body>
 </html>
